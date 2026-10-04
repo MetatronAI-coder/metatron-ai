@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metatron AI — Free Open-Source Cyber Threat Intelligence</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #141a22;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --green: #3fb950;
+      --border: #30363d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header { margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+    h1 { font-size: 1.8rem; font-weight: 600; letter-spacing: -0.02em; }
+    .tagline { color: var(--muted); margin-top: 0.4rem; font-size: 1.05rem; }
+    .badge {
+      display: inline-block;
+      background: #1f6feb33;
+      color: var(--accent);
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      margin-top: 0.8rem;
+      border: 1px solid #1f6feb55;
+    }
+    section { margin-bottom: 2.5rem; }
+    h2 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--accent); }
+    p, li { color: var(--text); margin-bottom: 0.7rem; }
+    ul { padding-left: 1.3rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .card h3 { font-size: 1rem; margin-bottom: 0.4rem; }
+    .meta { color: var(--muted); font-size: 0.85rem; }
+    .status { color: var(--green); font-weight: 500; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #0b0f14;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+    .cta:hover { opacity: 0.9; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Metatron AI</h1>
+      <p class="tagline">Free, open-source cyber threat intelligence for the public good.</p>
+      <span class="badge">Non-profit • Open Source • Zero Cost</span>
+    </header>
+
+    <section>
+      <h2>What We Do</h2>
+      <p>Metatron AI is a structured analysis and design framework focused on defensive cybersecurity. We collect, normalize, and publish free threat intelligence from authoritative public sources so that under-resourced organizations (water utilities, rural hospitals, small municipalities, and non-profits) can see the same high-priority threats that larger organizations see.</p>
+      <p>We do not sell services. We do not run offensive operations against real systems. Everything we publish is derived from open sources and is free to use.</p>
+    </section>
+
+    <section>
+      <h2>Live Intelligence Pipeline</h2>
+      <div class="card">
+        <h3>Current Status <span class="status">● Operational</span></h3>
+        <p class="meta">Last full pull: 2026-10-04</p>
+        <ul>
+          <li><strong>1,733</strong> CISA Known Exploited Vulnerabilities</li>
+          <li><strong>3,299</strong> ThreatFox indicators (last 24 h)</li>
+          <li><strong>901</strong> URLhaus malicious URLs (recent)</li>
+          <li><strong>5</strong> Feodo Tracker botnet C2 IPs</li>
+        </ul>
+        <p class="meta">Total indicators currently tracked: <strong>5,938</strong></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Latest Public Report</h2>
+      <div class="card">
+        <h3>Weekly KEV Brief — 4 October 2026</h3>
+        <p class="meta">High-priority known-exploited vulnerabilities added in the last 10 days</p>
+        <p>Key vendors affected this period: <strong>Zammad, Fortinet, Cisco, Apple, Citrix, Mikrotik, Adobe, WSO2</strong>.</p>
+        <p><a href="report-2026-10-04.html">Read the full brief →</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Free Offer for Critical Infrastructure</h2>
+      <p>We offer a limited number of free, scoped OT Security Assessments for small water utilities and rural hospitals.</p>
+      <ul>
+        <li>20 hours total effort</li>
+        <li>Written report with prioritized findings</li>
+        <li>No cost, no upsell</li>
+        <li>One-page written agreement required</li>
+      </ul>
+      <a class="cta" href="mailto:metatronai@icloud.com">Request an assessment</a>
+    </section>
+
+    <section>
+      <h2>Principles</h2>
+      <ul>
+        <li>Source is not truth — we triangulate.</li>
+        <li>Every claim carries a confidence score.</li>
+        <li>Law and ethics are hard stops.</li>
+        <li>No operations against non-consenting systems.</li>
+        <li>Everything we build is free and open source.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Metatron AI • Non-profit cybersecurity initiative</p>
+      <p>Contact: <a href="mailto:metatronai@icloud.com">metatronai@icloud.com</a></p>
+      <p>Motto: Magenta tests. Blue defends. Purple learns. Metatron scores.</p>
+      <p style="margin-top:1rem;font-size:0.8rem;">TLP:CLEAR — This page and its reports may be shared freely.</p>
+    </footer>
+  </div>
+</body>
+</html>
