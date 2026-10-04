@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly KEV Brief — 4 October 2026 | Metatron AI</title>
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #141a22;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --border: #30363d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 860px; margin: 0 auto; }
+    header { margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 1.2rem; }
+    h1 { font-size: 1.6rem; }
+    .meta { color: var(--muted); font-size: 0.95rem; margin-top: 0.3rem; }
+    h2 { font-size: 1.2rem; color: var(--accent); margin: 2rem 0 1rem; }
+    .vuln {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .vuln h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+    .cve { color: var(--accent); font-family: ui-monospace, monospace; }
+    .label { color: var(--muted); font-size: 0.85rem; }
+    .action { margin-top: 0.6rem; padding-top: 0.6rem; border-top: 1px solid var(--border); font-size: 0.92rem; }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Weekly KEV Brief</h1>
+      <p class="meta">4 October 2026 • Metatron AI • TLP:CLEAR</p>
+      <p class="meta">Source: CISA Known Exploited Vulnerabilities Catalog (live pull)</p>
+    </header>
+
+    <p>This brief highlights the most recently added known-exploited vulnerabilities. All entries below are confirmed by CISA as actively exploited in the wild. Organizations should treat these as high priority for patching or mitigation, especially if the product is internet-facing or used in critical infrastructure.</p>
+
+    <h2>Highest Priority — Last 10 Days</h2>
+
+    <div class="vuln">
+      <h3><span class="cve">CVE-2026-102489</span> + <span class="cve">CVE-2026-102490</span></h3>
+      <p><strong>Zammad GmbH — Zammad</strong></p>
+      <p class="label">Added: 2026-10-02</p>
+      <p>Session fixation that can lead to remote code execution as the zammad user, chainable with an improper privilege management flaw that escalates to root.</p>
+      <div class="action"><strong>Required action:</strong> Apply vendor mitigations immediately. Evaluate internet exposure.</div>
+    </div>
+
+    <div class="vuln">
+      <h3><span class="cve">CVE-2026-104286</span></h3>
+      <p><strong>Fortinet — FortiMail</strong></p>
+      <p class="label">Added: 2026-10-01</p>
+      <p>Path traversal vulnerability. Fortinet products remain frequent targets; treat any unpatched FortiMail instance as high risk.</p>
+      <div class="action"><strong>Required action:</strong> Apply vendor patches or mitigations without delay.</div>
+    </div>
+
+    <div class="vuln">
+      <h3><span class="cve">CVE-2026-76504</span></h3>
+      <p><strong>Cisco — Catalyst SD-WAN Manager</strong></p>
+      <p class="label">Added: 2026-09-30</p>
+      <p>Critical management-plane vulnerability in SD-WAN infrastructure. High impact for any organization running Cisco SD-WAN.</p>
+      <div class="action"><strong>Required action:</strong> Follow Cisco advisory and CISA BOD 26-04 guidance.</div>
+    </div>
+
+    <div class="vuln">
+      <h3><span class="cve">CVE-2026-86950</span></h3>
+      <p><strong>Apple — Multiple Products</strong></p>
+      <p class="label">Added: 2026-09-29</p>
+      <p>Actively exploited vulnerability affecting multiple Apple products. Prioritize endpoints and any internet-facing Apple services.</p>
+      <div class="action"><strong>Required action:</strong> Apply Apple security updates immediately.</div>
+    </div>
+
+    <div class="vuln">
+      <h3><span class="cve">CVE-2026-88771</span> + <span class="cve">CVE-2026-88772</span></h3>
+      <p><strong>Citrix — NetScaler</strong></p>
+      <p class="label">Added: 2026-09-27</p>
+      <p>Two new known-exploited flaws in NetScaler. NetScaler has a long history of rapid exploitation after disclosure.</p>
+      <div class="action"><strong>Required action:</strong> Patch or mitigate immediately; verify no compromise.</div>
+    </div>
+
+    <div class="vuln">
+      <h3><span class="cve">CVE-2026-71362</span></h3>
+      <p><strong>Adobe — Commerce / Magento</strong></p>
+      <p class="label">Added: 2026-09-24</p>
+      <p>Incorrect authorization vulnerability that can lead to elevated access to sensitive resources.</p>
+      <div class="action"><strong>Required action:</strong> Apply Adobe security patches.</div>
+    </div>
+
+    <div class="vuln">
+      <h3><span class="cve">CVE-2026-5430</span></h3>
+      <p><strong>WSO2 — Multiple Products</strong></p>
+      <p class="label">Added: 2026-09-24</p>
+      <p>Path traversal allowing unrestricted file upload and potential remote code execution across several WSO2 components.</p>
+      <div class="action"><strong>Required action:</strong> Apply vendor fixes; restrict exposure if unpatched.</div>
+    </div>
+
+    <h2>Recommendations for Small Organizations</h2>
+    <ol style="padding-left:1.3rem; margin-bottom:1.5rem;">
+      <li>Inventory whether you run any of the products listed above.</li>
+      <li>If internet-facing, patch or take offline until patched.</li>
+      <li>If internal only, still schedule the update within the next maintenance window.</li>
+      <li>Monitor CISA KEV daily — new entries appear frequently.</li>
+    </ol>
+
+    <p>Full current KEV catalog is available at the official CISA site. This brief is an independent, free summary intended for under-resourced defenders.</p>
+
+    <footer>
+      <p><a href="index.html">← Back to Metatron AI</a></p>
+      <p style="margin-top:0.8rem;">Metatron AI • Non-profit • Open source • metatronai@icloud.com</p>
+      <p>TLP:CLEAR — Share freely.</p>
+    </footer>
+  </div>
+</body>
+</html>
