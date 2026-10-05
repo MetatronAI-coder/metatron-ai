@@ -1,0 +1,32 @@
+name: Metatron Ingest Pipeline
+
+on:
+  schedule:
+    # Runs every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Metatron ingest
+        env:
+          ABUSECH_AUTH_KEY: ${{ secrets.ABUSECH_AUTH_KEY }}
+        run: |
+          python metatron_ingest.py --once
+
+      - name: Upload database artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: metatron-intel-db
+          path: metatron_intel.db
+          retention-days: 7
